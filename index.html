@@ -1,430 +1,224 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/brands.min.css">
-    <title>portfolio</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
+    <meta name="description" content="Jils Patel - MTech CSE Student at IIIT Bangalore specializing in AI/ML">
+    <title>Jils Patel - Portfolio</title>
 
-        body {
-            background-color: rgb(0, 0, 57);
-            color: white;
-            font-family: 'Times New Roman', Times, serif;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            height: 80px;
-            background-color: rgb(8, 0, 42);
-        }
-
-        nav ul {
-
-            display: flex;
-            justify-content: center;
-        }
-
-        nav ul li {
-            list-style: none;
-            margin: 0 23px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: white;
-        }
-
-        nav ul li a:hover {
-            text-decoration: underline;
-            color: rgb(130, 130, 255)
-        }
-
-        main hr {
-            border: 0;
-            background-color: rgb(178, 112, 240);
-            height: 1.2px;
-            margin: 40px 84px;
-        }
-
-        .left {
-            font-size: 1.5rem;
-        }
-
-        .firstsection {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            margin: 120px 0;
-        }
-
-        .firstsection>div {
-            width: 30%;
-        }
-
-        .leftsection {
-
-            font-size: 3rem;
-
-        }
-
-        .leftsection .buttons {
-            padding: 50px 0;
-        }
-
-        .leftsection .btn {
-
-            padding: 12px;
-            background: rgb(1, 1, 134);
-            color: white;
-            border: 2px solid white;
-            border-radius: 5px;
-            font-size: 20px;
-            cursor: pointer;
-
-        }
-
-        .leftsection .btndesign {
-            text-decoration: none;
-            color: white;
-        }
-
-        .rightsection img {
-            width: 80%;
-            margin: 50px 0;
-        }
-
-        .text-gray {
-            color: gray;
-            font-size: 1.4rem;
-        }
-
-        .secondsection {
-            max-width: 80vw;
-            margin: auto;
-            height: 80vh;
-        }
-
-        .secondsection h1 {
-            font-size: 1..9rem;
-        }
-
-        .secondsection .box {
-            background: white;
-            width: 83vw;
-            height: 2px;
-            margin: 53px 0;
-            display: flex;
-        }
-
-        .secondsection .vertical {
-            height: 93px;
-            width: 2px;
-            background: white;
-            margin: 0 150px;
-        }
-
-        .pythonimg {
-            width: 30px;
-            position: relative;
-            top: -32px;
-            left: -9px
-        }
-
-        .javaimg {
-            width: 35px;
-            position: relative;
-            top: -32px;
-            left: -9px
-        }
-
-        .webdevimg {
-            width: 45px;
-            position: relative;
-            top: -32px;
-            left: -9px
-        }
-
-        .secondsection h1 {
-            font-size: 1.9rem;
-        }
-
-        .educationimg {
-            width: 45px;
-            position: relative;
-            top: -50px;
-            left: -9px
-        }
-
-        .thirdsection {
-            max-width: 80vw;
-            margin: auto;
-            height: 85vh;
-        }
-
-
-        .thirdsection .box {
-            background: white;
-            width: 85vw;
-            height: 2px;
-            margin: 65px 0;
-            display: flex;
-        }
-
-        .thirdsection .vertical {
-            height: 85px;
-            width: 2px;
-            background: white;
-            margin: 0 220px;
-        }
-
-        .thirdsection .vertical-title {
-            margin-top: -20px;
-        }
-
-        .vertical-title:hover {
-            font-size: 21px;
-        }
-
-        .vertical-title {
-            margin-top: 20px;
-            position: relative;
-            top: 75px;
-            width: 150px;
-            font-size: 20px;
-        }
-
-        .vertical-desc {
-            position: relative;
-            top: 78px;
-            color: gray;
-            width: 150px;
-            font-size: 15px;
-        }
-
-        footer {
-            background-color: rgb(8, 0, 42);
-
-        }
-
-        .footer {
-            display: flex;
-            padding: 23px 122px;
-            justify-content: space-evenly;
-        }
-
-        .footer a {
-            text-decoration: none;
-            color: white;
-        }
-
-        .footer>div {
-            width: 200px;
-        }
-
-        footer .footer-rights {
-            text-align: center;
-            color: gray;
-            padding: 12px 0;
-        }
-
-        .x {
-            align-items: center;
-            color: white;
-        }
-
-        .x .last {
-            color: white;
-            text-decoration: none;
-            margin-right: 10px;
-        }
-    </style>
+    <link rel="icon" type="image/png" href="assets/images/profile.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-    <header>
-        <nav>
-            <div class="left">
-                <h1>Jils's Portfolio</h1>
-            </div>
-            <div class="right">
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="About.html">About</a></li>
-                    <li><a href="project.html">Projects</a></li>
-                    <li><a href="contectme.html">Contact Me</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <section class="firstsection">
-            <div class="leftsection">
-                <p>Hi! My Name Is Jils</p>
-                <p>I Am A</p>
-                <span id="element"></span>
-                <div class="buttons">
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">Jils's Portfolio</div>
+            <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
-                    <button class="btn">
-                        <a class="btndesign" href="NEW_JILS_RESUME.pdf">View Resume</a>
-                    </button>
-                    <button class="btn">
-                        <a class="btndesign" href="https://github.com/JILSPATEL?tab=repositories">GitHub</a>
-                    </button>
-                </div>
-            </div>
-            <div class="rightsection">
-                <img src="devloper.png">
-
-            </div>
-        </section>
-        <hr>
-        <section class="secondsection">
-            <span class="text-gray">My Acadamic Projects</span>
-            <h1>Past Projects</h1>
-            <div class="box">
-                <div class="vertical">
-                    <img class="pythonimg" src="python.jpeg">
-                    <div class="vertical-title">
-                        Restaurant Billing system(2022)
-                    </div>
-                    <div class="vertical-desc">
-                        I have developed a project that efficiently manages restaurant billing operations, incorporating
-                        a systematic approach. It aims to streamline the process and ensure effective management of
-                        basic billing requirements within a restaurant setting.
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <p style="color: var(--primary-blue); font-weight: 600; margin-bottom: 1rem;">👋 Hi! My Name Is</p>
+                    <h1>Jils Patel</h1>
+                    <p class="tagline">MTech CSE Student | AI/ML Specialist</p>
+                    <p style="color: var(--text-secondary); margin-bottom: 2rem;">
+                        Passionate about creating innovative solutions in Artificial Intelligence,
+                        Machine Learning, and Full-Stack Development
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="NEW_JILS_RESUME.pdf" class="btn btn-primary" target="_blank">
+                            <i class="fas fa-file-pdf"></i> View Resume
+                        </a>
+                        <a href="https://github.com/JILSPATEL?tab=repositories" class="btn btn-secondary"
+                            target="_blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
                     </div>
                 </div>
-                <div class="vertical">
-                    <img class="webdevimg" src="webdev.png">
-                    <div class="vertical-title">
-                        GYM Website Design(2022)
-                    </div>
-                    <div class="vertical-desc">
-                        Create an impressive and intuitive gym front-end website design using CSS and HTML. Incorporate
-                        eye-catching visuals, smooth navigation, and responsive elements to provide a seamless user
-                        experience, encouraging visitors to explore and engage with the site's fitness offerings
-                        effortlessly.
-                    </div>
+                <div class="hero-image">
+                    <img src="assets/images/devloper.png" alt="Developer Illustration">
                 </div>
-                <div class="vertical">
-                    <img class="javaimg" src="java.png">
-                    <div class="vertical-title">
-                        Chatting Application Interface(2023)
-                    </div>
-                    <div class="vertical-desc">
-                        I successfully implemented the fundamental principles of Java Swing to develop a functional
-                        chatting application, showcasing my proficiency in the technology.
-                    </div>
-                </div>
-                <div class="vertical">
-                    <img class="webdevimg" src="webdev.png">
-                    <div class="vertical-title">
-                        Portfolio Website(2023)
-                    </div>
-                    <div class="vertical-desc">
-                        Welcome to my portfolio website! Created with HTML, CSS, and JavaScript, it showcases my passion
-                        for creativity and technology, offering a glimpse into my projects, skills, and achievements in
-                        a visually captivating and user-friendly design.
-                    </div>
-                </div>
-            </div>
-        </section>
-        <hr>
-        <section class="thirdsection">
-            <span class="text-gray">My Educational History</span>
-            <h1>MyEducation</h1>
-            <div class="box">
-                <div class="vertical">
-                    <img class="educationimg" src="ed.png">
-                    <div class="vertical-title">
-                        Saradar Petel School(2008-2018)
-                    </div>
-                    <div class="vertical-desc">
-                        Between 2008 and 2016, I completed my primary education, laying a strong foundation for my
-                        academic journey. Then, from 2016 to 2018, I pursued my secondary education, further expanding
-                        my knowledge and skills.
-                    </div>
-                </div>
-                <div class="vertical">
-                    <img class="educationimg" src="ed.png">
-                    <div class="vertical-title">
-                        N.M Nooten High School(2018-2020)
-                    </div>
-                    <div class="vertical-desc">
-                        Between 2018 and 2020, I successfully completed my higher education in the field of science.
-                    </div>
-                </div>
-                <div class="vertical">
-                    <img class="educationimg" src="ed.png">
-                    <div class="vertical-title">
-                        New LJ Institute Of Engineering And Technology(2020-2024)
-                    </div>
-                    <div class="vertical-desc">
-                        I completed my graduate studies in Computer Science and Engineering with a specialization in
-                        Artificial Intelligence & Machine Learning between 2020-2024.
-                    </div>
-                </div>
-
-            </div>
-        </section>
-    </main>
-    <footer>
-        <div class="footer">
-            <div class="footer-first">
-                <h3>Jils's Portfolio</h3>
-            </div>
-            <div class="footer-second">
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="About.html">About</a></li>
-                    <li><a href="project.html">Projects</a></li>
-                    <li><a href="contectme.html">Contact Me</a></li>
-                </ul>
-            </div>
-            <div class="footer-third">
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="About.html">About</a></li>
-                    <li><a href="project.html">Projects</a></li>
-                    <li><a href="contectme.html">Contact Me</a></li>
-                </ul>
-            </div>
-            <div class="footer-fourth">
-                <ul class="x">
-                    <li><a href="https://www.linkedin.com/in/jils-patel-9711b8242" target="_blank" class="last" id="AC">
-                            <i class="fa-brands fa-linkedin"></i>
-                        </a></li>
-                    <li><a href="https://instagram.com" target="_blank" class="last" id="AC">
-                            <i class="fa-brands fa-github"></i>
-                        </a></li>
-                    <li><a href="https://whatsapp.com" target="_blank" class="last" id="AC">
-                            <i class="fa-brands fa-whatsapp"></i>
-                        </a></li>
-                    <li><a href="https://whatsapp.com" target="_blank" class="last" id="AC">
-                            <i class="fa-brands fa-telegram"></i>
-                        </a></li>
-                </ul>
             </div>
         </div>
-        <div class="footer-rights">
-            CopyRight &#169 www.jils'sportfolio.com | All Rights Reserved
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <div class="section-header">
+                <p class="subtitle">🚀 My Academic Projects</p>
+                <h2>Past Projects</h2>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content" style="margin-right: auto;">
+                        <img class="timeline-icon" src="assets/images/python.jpeg" alt="Python">
+                        <h3 class="timeline-title">💼 Restaurant Billing System (2022)</h3>
+                        <p class="timeline-desc">
+                            Developed an efficient restaurant billing management system using Python,
+                            streamlining operations and ensuring effective management of billing requirements.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content" style="margin-left: auto;">
+                        <img class="timeline-icon" src="assets/images/webdev.png" alt="Web Development">
+                        <h3 class="timeline-title">💪 GYM Website Design (2022)</h3>
+                        <p class="timeline-desc">
+                            Created an impressive gym website using HTML and CSS with eye-catching visuals,
+                            smooth navigation, and responsive elements for seamless user experience.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content" style="margin-right: auto;">
+                        <img class="timeline-icon" src="assets/images/java.png" alt="Java">
+                        <h3 class="timeline-title">💬 Chatting Application (2023)</h3>
+                        <p class="timeline-desc">
+                            Implemented a functional chatting application using Java Swing,
+                            showcasing proficiency in GUI development and socket programming.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content" style="margin-left: auto;">
+                        <img class="timeline-icon" src="assets/images/webdev.png" alt="Web Development">
+                        <h3 class="timeline-title">🌐 Portfolio Website (2023)</h3>
+                        <p class="timeline-desc">
+                            Built this portfolio website with HTML, CSS, and JavaScript,
+                            showcasing projects, skills, and achievements in a modern design.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <div class="container">
+            <div class="section-header">
+                <p class="subtitle">🎓 My Educational Journey</p>
+                <h2>Education</h2>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content" style="margin-right: auto;">
+                        <img class="timeline-icon" src="assets/images/ed.png" alt="Education">
+                        <h3 class="timeline-title">📚 Saradar Patel School (2008-2018)</h3>
+                        <p class="timeline-desc">
+                            Completed primary and secondary education (2008-2018), building a strong
+                            academic foundation for future studies.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content" style="margin-left: auto;">
+                        <img class="timeline-icon" src="assets/images/ed.png" alt="Education">
+                        <h3 class="timeline-title">🔬 N.M Nooten High School (2018-2020)</h3>
+                        <p class="timeline-desc">
+                            Successfully completed higher secondary education in Science stream,
+                            focusing on Physics, Chemistry, and Mathematics.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content" style="margin-right: auto;">
+                        <img class="timeline-icon" src="assets/images/ed.png" alt="Education">
+                        <h3 class="timeline-title">🎓 New LJ Institute (2020-2024)</h3>
+                        <p class="timeline-desc">
+                            Completed BTech in Computer Science and Engineering with specialization
+                            in Artificial Intelligence & Machine Learning.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content" style="margin-left: auto;">
+                        <img class="timeline-icon" src="assets/images/ed.png" alt="Education">
+                        <h3 class="timeline-title">💻 IIIT Bangalore (2024-2026)</h3>
+                        <p class="timeline-desc">
+                            Currently pursuing MTech in Computer Science and Engineering at
+                            International Institute of Information Technology, Bangalore.
+                            Specializing in AI, ML, and Advanced Computing Systems.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Jils's Portfolio</h3>
+                    <p style="color: var(--text-muted);">
+                        MTech CSE Student at IIIT Bangalore | AI/ML Specialist
+                    </p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/jils-patel-9711b8242" target="_blank"
+                            aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/JILSPATEL" target="_blank" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://wa.me/" target="_blank" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://t.me/" target="_blank" aria-label="Telegram">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>Copyright © 2024 Jils's Portfolio | All Rights Reserved</p>
+            </div>
         </div>
     </footer>
-    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-    <script>
-        var typed = new Typed('#element', {
-            strings: ['Python Programmer!', 'Java Programmer!', 'Web Developer!'],
-            typeSpeed: 50,
-        });
-    </script>
+
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>
