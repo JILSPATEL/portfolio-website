@@ -203,6 +203,36 @@ a:hover {
     margin-bottom: var(--spacing-xs);
 }
 
+.btn-secondary {
+    background: transparent;
+    border: 2px solid var(--primary-blue);
+    color: var(--primary-blue);
+}
+
+.btn-secondary:hover {
+    background: var(--primary-blue);
+    color: white;
+}
+
+/* Sections */
+section {
+    padding: var(--spacing-2xl) 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.subtitle {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--primary-blue);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: var(--spacing-sm);
+}
+
 /* Hero Section */
 .hero {
     min-height: 100vh;
@@ -259,9 +289,12 @@ a:hover {
     content: '';
     position: absolute;
     left: 50%;
+    top: 0;
+    bottom: 0;
     transform: translateX(-50%);
     width: 2px;
-    height: 100%;
+    height: calc(100% - var(--spacing-xl));
+    margin-top: calc(var(--spacing-xl) / 2);
     background: var(--primary-blue);
 }
 
