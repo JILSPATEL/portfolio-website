@@ -199,8 +199,9 @@ a:hover {
 .btn-primary:hover {
     color: white;
     font-weight: 600;
-    letter-spacing: 0.1em;
-    margin-bottom: var(--spacing-xs);
+    letter-spacing: 0em;
+    /* margin-bottom: var(--spacing-xs); */
+    filter: drop-shadow(0 20px 40px rgba(59, 130, 246, 0.3));
 }
 
 .btn-secondary {
@@ -212,6 +213,7 @@ a:hover {
 .btn-secondary:hover {
     background: var(--primary-blue);
     color: white;
+    filter: drop-shadow(0 20px 40px rgba(59, 130, 246, 0.3))
 }
 
 /* Sections */
@@ -331,6 +333,7 @@ section {
 .timeline-content:hover {
     transform: scale(1.05);
     border-color: var(--primary-blue);
+    filter: drop-shadow(0 20px 40px rgba(59, 130, 246, 0.3));
 }
 
 .timeline-icon {
