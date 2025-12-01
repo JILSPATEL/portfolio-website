@@ -200,14 +200,14 @@ a:hover {
     color: var(--primary-blue);
     /* font-weight: 600; */
     background: transparent;
-    border: 2px solid var(--primary-blue);
+    border: 1px solid var(--primary-blue);
     /* margin-bottom: var(--spacing-xs); */
     filter: drop-shadow(0 20px 40px rgba(59, 130, 246, 0.3));
 }
 
 .btn-secondary {
     background: transparent;
-    border: 2px solid var(--primary-blue);
+    border: 1px solid var(--primary-blue);
     color: var(--primary-blue);
 }
 
