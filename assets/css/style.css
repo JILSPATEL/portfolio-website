@@ -216,6 +216,34 @@ a:hover {
     color: white;
     filter: drop-shadow(0 20px 40px rgba(59, 130, 246, 0.3))
 }
+.custom-contact-form .submit-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 2rem;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+
+    border: 2px solid var(--primary-blue);
+    background: var(--primary-blue);
+    color: #fff;
+
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.custom-contact-form .submit-btn:hover {
+    background: transparent;
+    color: var(--primary-blue);
+    border-color: var(--primary-blue);
+
+    /* smooth glow – no lift */
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+}
+
+
 
 /* Sections */
 section {
