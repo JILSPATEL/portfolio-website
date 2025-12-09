@@ -5,7 +5,7 @@ const projectsData = [
         description: "A modular TCP-based client–server banking system implemented in C on Linux, offering secure account management, transaction handling, and structured socket communication. Built with file-based storage and robust system-level practices.",
         image: "assets/images/project.png",
         icon: "assets/images/linux.jpeg", // For timeline view
-        year: "2024",
+        year: "2025",
         tags: ["C", "Client–Server", "Linux"],
         github: "https://github.com/JILSPATEL/banking-management-system"
     },
@@ -14,9 +14,18 @@ const projectsData = [
         description: "A comprehensive billing management system built with Python that streamlines restaurant operations, handles order processing, and generates detailed invoices efficiently.",
         image: "assets/images/project.png",
         icon: "assets/images/python.jpeg", // For timeline view
-        year: "2022",
+        year: "2024",
         tags: ["Python", "Tkinter", "MySQL"],
         github: "https://github.com/JILSPATEL/restaurant-billing-system"
+    },
+    {
+        title: "🌱 Smart Farming Crop Predictor",
+        description: "A machine-learning based crop recommendation tool that predicts the best crop using soil nutrients (N, P, K), pH, and seasonal conditions. Helps farmers make data-driven decisions with ~96% accuracy, built using pandas, numpy, and scikit-learn.",
+        image: "assets/images/project.png",
+        icon: "assets/images/python.jpeg",
+        year: "2023",
+        tags: ["Python", "Machine Learning", "Flask"],
+        github: "https://github.com/JILSPATEL/smart-farming"
     },
     {
         title: "🌐 Portfolio Website",
@@ -32,7 +41,7 @@ const projectsData = [
         description: "A real-time chatting application developed using Java Swing with socket programming, featuring a clean interface and secure messaging capabilities.",
         image: "assets/images/project.png",
         icon: "assets/images/java.png", // For timeline view
-        year: "2023",
+        year: "2022",
         tags: ["Java", "Swing", "Sockets"],
         github: "https://github.com/JILSPATEL/chating-application"
     }
