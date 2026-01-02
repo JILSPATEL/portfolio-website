@@ -19,6 +19,16 @@ const projectsData = [
         github: "https://github.com/JILSPATEL/restaurant-billing-system"
     },
     {
+        title: "🛒 Ecommerce Solution",
+        description: "A full-stack ecommerce web application featuring user authentication, product management, cart functionality, and secure order processing. Built with React for a responsive frontend, Node.js for backend APIs, and MySQL for reliable data storage.",
+        image: "assets/images/project.png",
+        icon: "assets/images/react.png", // For timeline view
+        year: "2024",
+        tags: ["React", "Node.js", "MySQL", "REST API"],
+        github: "https://github.com/JILSPATEL/ecommerce_solution-react"
+
+    },
+    {
         title: "🌱 Smart Farming Crop Predictor",
         description: "A machine-learning based crop recommendation tool that predicts the best crop using soil nutrients (N, P, K), pH, and seasonal conditions. Helps farmers make data-driven decisions with ~96% accuracy, built using pandas, numpy, and scikit-learn.",
         image: "assets/images/project.png",
@@ -26,15 +36,6 @@ const projectsData = [
         year: "2023",
         tags: ["Python", "Machine Learning", "Flask"],
         github: "https://github.com/JILSPATEL/smart-farming"
-    },
-    {
-        title: "🌐 Portfolio Website",
-        description: "This modern portfolio website showcasing my projects, skills, and achievements with a professional design and smooth animations.",
-        image: "assets/images/project.png",
-        icon: "assets/images/webdev.jpeg", // For timeline view
-        year: "2023",
-        tags: ["HTML", "CSS", "JavaScript"],
-        github: "https://github.com/JILSPATEL/portfolio-website"
     },
     {
         title: "💬 Chatting Application",
