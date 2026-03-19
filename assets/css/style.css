@@ -295,8 +295,20 @@ section {
 
 .hero-buttons {
     display: flex;
-    gap: var(--spacing-md);
-    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+.hero-buttons .btn {
+    flex: 1;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    white-space: nowrap;
+    font-size: 0.95rem;
 }
 
 .hero-image {
@@ -543,6 +555,7 @@ footer {
 
     .hero-buttons {
         justify-content: center;
+        flex-wrap: wrap;
     }
 
     .timeline::before {
