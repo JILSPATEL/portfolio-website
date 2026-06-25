@@ -13,7 +13,7 @@ const projectsData = [
         title: "🛡️ Microservices E-Commerce Platform with DevSecOps",
         description: "A cloud-native e-commerce system architected into 6 containerized microservices. Orchestrated on Kubernetes with HPA and Prometheus/Grafana monitoring, deployed via automated Jenkins/Ansible CI/CD pipelines, and hardened with Trivy, Syft, and Cosign security gates.",
         image: "assets/images/project.png",
-        icon: "assets/images/kubernetes.png", // Icon suited for infrastructure/DevOps view
+        icon: "assets/images/devops.jpg", // Icon suited for infrastructure/DevOps view
         year: "2026",
         tags: ["Docker", "Kubernetes", "Ansible", "Jenkins", "DevSecOps"],
         github: "https://github.com/JILSPATEL/spe-project.git" // Placeholder updated to match your pattern
