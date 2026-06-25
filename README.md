@@ -1,34 +1,41 @@
-# PORTFOLIO-WEBSITE
+# Jils Patel Portfolio Website
 
-# Portfolio Website
+A clean personal portfolio website built with HTML, CSS, and JavaScript. The site highlights academic projects, skills, education, and contact details in a modern responsive layout.
 
-This is a simple portfolio website built using HTML, CSS, PHP, and JavaScript. It showcases your projects, skills, and contact information.
+## Project Structure
 
-## Description
-
-This project is a personal portfolio website that allows you to present your projects, skills, and contact information in a visually appealing manner. The website is built with a combination of HTML, CSS, PHP(Basics), and JavaScript(Basics) to create a responsive and interactive user experience.
-
-## Images
-
-![Screenshot (43)](https://github.com/JILSPATEL/portfolio-website/assets/100358865/351eb670-bc87-4d4a-8b18-b0c6c03ddafe)
-![Screenshot (44)](https://github.com/JILSPATEL/portfolio-website/assets/100358865/17898221-8656-43dd-95b1-71a0f3983f94)
-![Screenshot (45)](https://github.com/JILSPATEL/portfolio-website/assets/100358865/13a4f337-5547-44ea-a722-e21cd40527a4)
-![Screenshot (48)](https://github.com/JILSPATEL/portfolio-website/assets/100358865/133048d8-f971-4c6e-8621-5be7630f2eee)
-![Screenshot (49)](https://github.com/JILSPATEL/portfolio-website/assets/100358865/1f3caad0-3fd9-47b5-9838-786f8300b4e6)
-![Screenshot (47)](https://github.com/JILSPATEL/portfolio-website/assets/100358865/ec43c4be-6db9-46f3-839c-fdd11cc1a862)
+- `index.html` - Home page with hero section, project highlights, and education timeline
+- `about.html` - About page with profile details, biography, and skills section
+- `projects.html` - Projects page with dynamically rendered project cards
+- `contact.html` - Contact page with contact cards and a custom contact form
+- `assets/css/style.css` - Main site styling
+- `assets/css/contact-form.css` - Contact form layout and styles
+- `assets/js/main.js` - Navigation and UI interactions
+- `assets/js/projects-data.js` - Project data used to populate the projects section
+- `assets/js/contact-form.js` - Contact form handling logic
+- `assets/images/` - Website illustrations and icons
+- `Jils_Resume.pdf` - Resume file linked from the homepage
 
 ## Features
 
-- Responsive design, suitable for various devices and screen sizes.
-- Projects section to showcase your work with project descriptions and links.
-- Contact section to contect me.
-- About Me section to provide a brief introduction.
-- Smooth scrolling and animated transitions for enhanced user experience.
+- Fully responsive layout optimized for desktop and mobile
+- Navigation across Home, About, Projects, and Contact pages
+- Project showcase with cards loaded from JavaScript data
+- Education timeline and skills section for developer profile
+- Contact page with email, LinkedIn, GitHub links, and contact form
+- Clean visual design with gradient cards and iconography
 
-## Customization
+## Usage
 
-You can further customize the website to suit your preferences and needs. Some possible customization options include:
+1. Open `index.html` in a browser.
+2. Navigate using the header links.
+3. Use the resume link to view the PDF.
+4. Visit the `Projects` page to see dynamically loaded project content.
+5. Submit a message via the contact form on `contact.html`.
 
-- Changing the color scheme in the CSS files.
-- Adding additional sections such as a blog, testimonials, or certifications.
-- Modifying the layout and design to match your personal branding.
+## Notes
+
+- No backend is required for the static portfolio pages.
+- The contact form currently uses client-side JavaScript for form interactions.
+- Update `assets/js/projects-data.js` to add or edit project entries.
+- Customize colors and layout in `assets/css/style.css` and `assets/css/contact-form.css`.
