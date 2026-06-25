@@ -1,10 +1,28 @@
 // Centralized projects data
 const projectsData = [
     {
+        title: "🗄️ Columnar Database Engine",
+        description: "A custom column-oriented relational database engine built from scratch in pure Java. Features a custom SQL parser, dictionary encoding, fixed-width record layouts for O(1) random access, and low-cardinality bitmap indexing using Java BitSet to significantly reduce filtered-scan latency.",
+        image: "assets/images/project.png",
+        icon: "assets/images/java.png", // Consistent with your Java icon path
+        year: "2026",
+        tags: ["Java", "Query Processing", "Bitmap Indexing", "Database Systems"],
+        github: "https://github.com/JILSPATEL/Column-Store-Data-Storage-System.git" // Placeholder updated to match your pattern
+    },
+    {
+        title: "🛡️ Microservices E-Commerce Platform with DevSecOps",
+        description: "A cloud-native e-commerce system architected into 6 containerized microservices. Orchestrated on Kubernetes with HPA and Prometheus/Grafana monitoring, deployed via automated Jenkins/Ansible CI/CD pipelines, and hardened with Trivy, Syft, and Cosign security gates.",
+        image: "assets/images/project.png",
+        icon: "assets/images/kubernetes.png", // Icon suited for infrastructure/DevOps view
+        year: "2026",
+        tags: ["Docker", "Kubernetes", "Ansible", "Jenkins", "DevSecOps"],
+        github: "https://github.com/JILSPATEL/spe-project.git" // Placeholder updated to match your pattern
+    },
+    {
         title: "🏦 Banking Management System",
         description: "A modular TCP-based client–server banking system implemented in C on Linux, offering secure account management, transaction handling, and structured socket communication. Built with file-based storage and robust system-level practices.",
         image: "assets/images/project.png",
-        icon: "assets/images/linux.jpeg", // For timeline view
+        icon: "assets/images/linux.jpeg", 
         year: "2025",
         tags: ["C", "Client–Server", "Linux"],
         github: "https://github.com/JILSPATEL/banking-management-system"
@@ -13,20 +31,10 @@ const projectsData = [
         title: "💼 Restaurant Billing System",
         description: "A comprehensive billing management system built with Python that streamlines restaurant operations, handles order processing, and generates detailed invoices efficiently.",
         image: "assets/images/project.png",
-        icon: "assets/images/python.jpeg", // For timeline view
+        icon: "assets/images/python.jpeg", 
         year: "2024",
         tags: ["Python", "Tkinter", "MySQL"],
         github: "https://github.com/JILSPATEL/restaurant-billing-system"
-    },
-    {
-        title: "🛒 Ecommerce Solution",
-        description: "A full-stack ecommerce web application featuring user authentication, product management, cart functionality, and secure order processing. Built with React for a responsive frontend, Node.js for backend APIs, and MySQL for reliable data storage.",
-        image: "assets/images/project.png",
-        icon: "assets/images/react.png", // For timeline view
-        year: "2024",
-        tags: ["React", "Node.js", "MySQL", "REST API"],
-        github: "https://github.com/JILSPATEL/ecommerce_solution-react"
-
     },
     {
         title: "🌱 Smart Farming Crop Predictor",
@@ -36,15 +44,6 @@ const projectsData = [
         year: "2023",
         tags: ["Python", "Machine Learning", "Flask"],
         github: "https://github.com/JILSPATEL/smart-farming"
-    },
-    {
-        title: "💬 Chatting Application",
-        description: "A real-time chatting application developed using Java Swing with socket programming, featuring a clean interface and secure messaging capabilities.",
-        image: "assets/images/project.png",
-        icon: "assets/images/java.png", // For timeline view
-        year: "2022",
-        tags: ["Java", "Swing", "Sockets"],
-        github: "https://github.com/JILSPATEL/chating-application"
     }
 ];
 
