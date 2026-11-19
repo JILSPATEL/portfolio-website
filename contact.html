@@ -4,147 +4,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact Jils Patel - Get in touch">
-    <title>Contact - Jils Patel</title>
+    <meta name="description" content="Contact Jils Patel - MTech CSE Scholar at IIIT Bangalore. Let's discuss software engineering opportunities, systems, and research.">
+    <title>Contact — Jils Patel</title>
 
     <link rel="icon" type="image/png" href="assets/images/project.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/contact-form.css">
 </head>
 
 <body>
-    <!-- Navigation -->
+    <!-- Top Scroll Progress Indicator -->
+    <div class="scroll-progress"></div>
+
+    <!-- Navigation Bar -->
     <nav>
         <div class="container">
-            <div class="logo">Jils's Portfolio</div>
-            <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+            <a href="./index.html" class="logo-wrap">
+                <span class="logo-badge">&lt;JP/&gt;</span>
+                <span class="logo-text">Jils<span>.dev</span></span>
+            </a>
+
+            <div class="nav-menu-wrapper">
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./projects.html">Projects</a></li>
+                    <li><a href="./contact.html" class="active">Contact</a></li>
+                </ul>
+                <a href="./Jils_Resume.pdf" target="_blank" rel="noopener noreferrer" class="nav-cta">
+                    <i class="fas fa-file-pdf"></i> Resume
+                </a>
+            </div>
+
+            <button class="mobile-menu-toggle" aria-label="Toggle Navigation">
                 <i class="fas fa-bars"></i>
             </button>
-            <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./about.html">About</a></li>
-                <li><a href="./projects.html">Projects</a></li>
-                <li><a href="./contact.html">Contact</a></li>
-            </ul>
         </div>
     </nav>
 
-    <!-- Header -->
-    <section style="padding: 4rem 0 2rem;">
+    <!-- Main Contact Section -->
+    <section>
         <div class="container">
             <div class="section-header">
-                <p class="subtitle">📧 Get In Touch</p>
-                <h1>Contact Me</h1>
-                <!-- <p style="max-width: 700px; margin: 0 auto; align-items: left;">
-                    Have a question or want to work together? Feel free to reach out!
-                </p> -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Info Cards -->
-    <section style="padding: 2rem 0;">
-        <div class="container">
-            <div class="contact-container">
-                <div class="contact-card fade-in">
-                    <div class="contact-icon">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <div>
-                        <h3>Email</h3>
-                        <p><a href="mailto:201430142023.cse.jils@gmail.com">Mail</a></p>
-                    </div>
-                </div>
-
-                <div class="contact-card fade-in">
-                    <div class="contact-icon">
-                        <i class="fab fa-linkedin"></i>
-                    </div>
-                    <div>
-                        <h3>LinkedIn</h3>
-                        <p><a href="https://www.linkedin.com/in/jilspatel29765048/" target="_blank">Jils Patel</a></p>
-                    </div>
-                </div>
-
-                <div class="contact-card fade-in">
-                    <div class="contact-icon">
-                        <i class="fab fa-github"></i>
-                    </div>
-                    <div>
-                        <h3>GitHub</h3>
-                        <p><a href="https://github.com/JILSPATEL" target="_blank">@JILSPATEL</a></p>
-                    </div>
-                </div>
-
-                <div class="contact-card fade-in">
-                    <div class="contact-icon">
-                        <i class="fas fa-map-marker-alt"></i>
-                    </div>
-                    <div>
-                        <h3>Location</h3>
-                        <p>India</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Custom Contact Form Section -->
-    <section style="padding: 2rem 0 4rem;">
-        <div class="container">
-            <div class="section-header">
-                <h2>Send Me a Message</h2>
-                <!-- <p>Fill out the form below and I'll get back to you as soon as possible!</p> -->
+                <div class="subtitle"><i class="fas fa-envelope-open-text"></i> Communication &amp; Inquiries</div>
+                <h2>Let's Start a Conversation</h2>
+                <p>
+                    I am actively exploring Summer 2026 internship and full-time software engineering opportunities.
+                    Feel free to reach out directly or drop a message below!
+                </p>
             </div>
 
-            <div class="custom-contact-form fade-in">
-                <form id="contactForm" class="contact-form-grid">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="firstName">
-                                <i class="fas fa-user"></i> First Name *
-                            </label>
-                            <input type="text" id="firstName" name="firstName" required
-                                placeholder="Enter your first name">
+            <div class="contact-grid-layout">
+                <!-- Left: Quick Direct Channels -->
+                <div class="contact-cards-stack">
+                    <a href="mailto:201430142023.cse.jils@gmail.com" class="contact-quick-card fade-in">
+                        <div class="contact-icon-box">
+                            <i class="fas fa-envelope"></i>
                         </div>
-                        <div class="form-group">
-                            <label for="lastName">
-                                <i class="fas fa-user"></i> Last Name *
-                            </label>
-                            <input type="text" id="lastName" name="lastName" required
-                                placeholder="Enter your last name">
+                        <div class="contact-quick-info">
+                            <h4>Direct Email</h4>
+                            <p>201430142023.cse.jils@gmail.com</p>
+                        </div>
+                        <i class="fas fa-arrow-right contact-arrow-icon"></i>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/jilspatel29765048/" target="_blank" rel="noopener noreferrer" class="contact-quick-card fade-in">
+                        <div class="contact-icon-box">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <div class="contact-quick-info">
+                            <h4>LinkedIn Profile</h4>
+                            <p>linkedin.com/in/jilspatel29765048</p>
+                        </div>
+                        <i class="fas fa-external-link-alt contact-arrow-icon"></i>
+                    </a>
+
+                    <a href="https://github.com/JILSPATEL" target="_blank" rel="noopener noreferrer" class="contact-quick-card fade-in">
+                        <div class="contact-icon-box">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="contact-quick-info">
+                            <h4>GitHub Repositories</h4>
+                            <p>github.com/JILSPATEL</p>
+                        </div>
+                        <i class="fas fa-external-link-alt contact-arrow-icon"></i>
+                    </a>
+
+                    <a href="https://t.me/Jils18" target="_blank" rel="noopener noreferrer" class="contact-quick-card fade-in">
+                        <div class="contact-icon-box">
+                            <i class="fab fa-telegram"></i>
+                        </div>
+                        <div class="contact-quick-info">
+                            <h4>Telegram</h4>
+                            <p>@Jils18</p>
+                        </div>
+                        <i class="fas fa-external-link-alt contact-arrow-icon"></i>
+                    </a>
+
+                    <div class="contact-quick-card fade-in" style="cursor: default;">
+                        <div class="contact-icon-box">
+                            <i class="fas fa-map-pin"></i>
+                        </div>
+                        <div class="contact-quick-info">
+                            <h4>Location</h4>
+                            <p>Bangalore, Karnataka, India</p>
                         </div>
                     </div>
 
-                    <div class="form-group">
-                        <label for="email">
-                            <i class="fas fa-envelope"></i> Email Address *
-                        </label>
-                        <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                    <!-- Availability Card -->
+                    <div class="glass-panel" style="padding: 1.5rem; margin-top: 0.5rem; border-color: rgba(16, 185, 129, 0.3);">
+                        <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.5rem;">
+                            <span class="radar-ping"></span>
+                            <h4 style="color: #6ee7b7; font-size: 1rem; margin: 0;">Currently Open For Roles</h4>
+                        </div>
+                        <p style="color: var(--text-muted); font-size: 0.88rem; margin: 0; line-height: 1.5;">
+                            Available for Software Engineering, Distributed Systems, Backend &amp; DevSecOps, and Applied AI roles.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Right: Custom Contact Form -->
+                <div class="custom-contact-form fade-in">
+                    <div style="margin-bottom: 1.75rem;">
+                        <h3 style="font-size: 1.5rem; margin-bottom: 0.35rem;">Send a Message</h3>
+                        <p style="color: var(--text-muted); font-size: 0.92rem;">
+                            Fill in your details below and I'll respond as soon as possible.
+                        </p>
                     </div>
 
-                    <div class="form-group">
-                        <label for="subject">
-                            <i class="fas fa-tag"></i> Subject *
-                        </label>
-                        <input type="text" id="subject" name="subject" required placeholder="What's this about?">
-                    </div>
+                    <form id="contactForm" class="contact-form-grid">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">
+                                    <i class="fas fa-user"></i> First Name *
+                                </label>
+                                <input type="text" id="firstName" name="firstName" required placeholder="John">
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">
+                                    <i class="fas fa-user"></i> Last Name *
+                                </label>
+                                <input type="text" id="lastName" name="lastName" required placeholder="Doe">
+                            </div>
+                        </div>
 
-                    <div class="form-group">
-                        <label for="message">
-                            <i class="fas fa-comment"></i> Message *
-                        </label>
-                        <textarea id="message" name="message" rows="6" required
-                            placeholder="Tell me more..."></textarea>
-                    </div>
+                        <div class="form-group">
+                            <label for="email">
+                                <i class="fas fa-envelope"></i> Email Address *
+                            </label>
+                            <input type="email" id="email" name="email" required placeholder="john.doe@example.com">
+                        </div>
 
-                    <button type="submit" class="btn btn-primary submit-btn">
-                        <i class="fas fa-paper-plane"></i> Send Message
-                    </button>
+                        <div class="form-group">
+                            <label for="subject">
+                                <i class="fas fa-tag"></i> Subject *
+                            </label>
+                            <input type="text" id="subject" name="subject" required placeholder="Project discussion / Role opportunity">
+                        </div>
 
-                    <div id="formStatus" class="form-status"></div>
-                </form>
+                        <div class="form-group">
+                            <label for="message">
+                                <i class="fas fa-comment-dots"></i> Message *
+                            </label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Hi Jils, I wanted to reach out regarding..."></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+
+                        <div id="formStatus" class="form-status"></div>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
@@ -153,47 +187,61 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Jils's Portfolio</h3>
-                    <p style="color: var(--text-muted);">
-                        MTech CSE Student | AI/ML Specialist
+                <div class="footer-brand">
+                    <a href="./index.html" class="logo-wrap">
+                        <span class="logo-badge">&lt;JP/&gt;</span>
+                        <span class="logo-text">Jils<span>.dev</span></span>
+                    </a>
+                    <p>
+                        MTech CSE Student at IIIT Bangalore. Crafting high-performance database engines,
+                        scalable microservices, and AI solutions.
                     </p>
                 </div>
 
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <ul>
+                <div>
+                    <h4 class="footer-heading">Navigation</h4>
+                    <ul class="footer-nav-list">
                         <li><a href="./index.html">Home</a></li>
-                        <li><a href="./about.html">About</a></li>
+                        <li><a href="./about.html">About Me</a></li>
                         <li><a href="./projects.html">Projects</a></li>
                         <li><a href="./contact.html">Contact</a></li>
+                        <li><a href="./Jils_Resume.pdf" target="_blank">Resume (PDF)</a></li>
                     </ul>
                 </div>
 
-                <div class="footer-section">
-                    <h3>Connect</h3>
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/jilspatel29765048/" target="_blank" aria-label="LinkedIn">
+                <div>
+                    <h4 class="footer-heading">Connect</h4>
+                    <div class="footer-socials-row">
+                        <a href="https://www.linkedin.com/in/jilspatel29765048/" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="LinkedIn">
                             <i class="fab fa-linkedin"></i>
                         </a>
-                        <a href="https://github.com/JILSPATEL" target="_blank" aria-label="GitHub">
+                        <a href="https://github.com/JILSPATEL" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="GitHub">
                             <i class="fab fa-github"></i>
                         </a>
-                        <a href="https://wa.me/" target="_blank" aria-label="WhatsApp">
-                            <i class="fab fa-whatsapp"></i>
+                        <a href="mailto:201430142023.cse.jils@gmail.com" class="footer-social-btn" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
                         </a>
-                        <a href="https://t.me/Jils18" target="_blank" aria-label="Telegram">
+                        <a href="https://t.me/Jils18" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Telegram">
                             <i class="fab fa-telegram"></i>
+                        </a>
+                        <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
                         </a>
                     </div>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p>Copyright © 2024 Jils's Portfolio | All Rights Reserved</p>
+                <p>&copy; 2026 Jils Patel. All rights reserved.</p>
+                <p>Engineered with Modern Glassmorphism &amp; High-Performance Web Standards.</p>
             </div>
         </div>
     </footer>
+
+    <!-- Back to top button -->
+    <button class="back-to-top" aria-label="Back to Top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
 
     <script src="assets/js/main.js"></script>
     <script src="assets/js/contact-form.js"></script>

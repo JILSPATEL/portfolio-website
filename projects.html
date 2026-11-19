@@ -4,154 +4,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Projects by Jils Patel">
-    <title>Projects - Jils Patel</title>
+    <meta name="description" content="Engineering Projects by Jils Patel - Columnar Databases, DevSecOps Microservices, Systems Programming, and Machine Learning">
+    <title>Projects — Jils Patel</title>
 
     <link rel="icon" type="image/png" href="assets/images/project.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
-
-    <style>
-        .projects-section {
-            padding: 4rem 0;
-        }
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2.5rem;
-            margin-top: 3rem;
-        }
-
-        /* Make the card a flex container */
-        .project-card {
-            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-            border: 1px solid rgba(59, 130, 246, 0.2);
-            border-radius: 1rem;
-            overflow: hidden;
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-
-            display: flex;
-            flex-direction: column;
-            /* Enables bottom alignment */
-        }
-
-        .project-card:hover {
-            transform: translateY(-10px);
-            border-color: #3b82f6;
-            box-shadow: 0 20px 50px rgba(59, 130, 246, 0.4);
-        }
-
-        .project-image-container {
-            position: relative;
-            width: 100%;
-            height: 250px;
-            overflow: hidden;
-            background: linear-gradient(135deg, #0f172a, #1e293b);
-        }
-
-        .project-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .project-card:hover .project-image {
-            transform: scale(1.1);
-        }
-
-        /* Make text content grow and push tags to bottom */
-        .project-content {
-            padding: 2rem;
-            flex: 1;
-
-            display: flex;
-            flex-direction: column;
-        }
-
-        .project-title {
-            font-size: 1.75rem;
-            color: #3b82f6;
-            margin-bottom: 1rem;
-        }
-
-        .project-description {
-            color: #cbd5e1;
-            line-height: 1.7;
-            margin-bottom: 1.5rem;
-        }
-
-        /* Push this group to the bottom of the card */
-        .tech-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-
-            margin-top: auto;
-            /* This pushes tags to bottom */
-            margin-bottom: 1rem;
-        }
-
-        .tech-tag {
-            padding: 0.4rem 1rem;
-            background: linear-gradient(135deg, #3b82f6, #2563eb);
-            color: white;
-            font-size: 0.75rem;
-            font-weight: 600;
-            border-radius: 1.5rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        /* Keep GitHub link at the very bottom */
-        .project-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: #3b82f6;
-            font-weight: 600;
-            transition: all 0.3s ease;
-
-            margin-top: 0.5rem;
-        }
-
-        .project-link:hover {
-            color: #60a5fa;
-            gap: 1rem;
-        }
-
-        .project-link i {
-            transition: transform 0.3s ease;
-        }
-
-        .project-link:hover i {
-            transform: translateX(5px);
-        }
-
-        @media (max-width: 768px) {
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
 </head>
 
 <body>
-    <!-- Navigation -->
+    <!-- Top Scroll Progress Indicator -->
+    <div class="scroll-progress"></div>
+
+    <!-- Navigation Bar -->
     <nav>
         <div class="container">
-            <div class="logo">Jils's Portfolio</div>
-            <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+            <a href="./index.html" class="logo-wrap">
+                <span class="logo-badge">&lt;JP/&gt;</span>
+                <span class="logo-text">Jils<span>.dev</span></span>
+            </a>
+
+            <div class="nav-menu-wrapper">
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./projects.html" class="active">Projects</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+                <a href="./Jils_Resume.pdf" target="_blank" rel="noopener noreferrer" class="nav-cta">
+                    <i class="fas fa-file-pdf"></i> Resume
+                </a>
+            </div>
+
+            <button class="mobile-menu-toggle" aria-label="Toggle Navigation">
                 <i class="fas fa-bars"></i>
             </button>
-            <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./about.html">About</a></li>
-                <li><a href="./projects.html">Projects</a></li>
-                <li><a href="./contact.html">Contact</a></li>
-            </ul>
         </div>
     </nav>
 
@@ -159,15 +48,33 @@
     <section class="projects-section">
         <div class="container">
             <div class="section-header">
-                <p class="subtitle">🚀 MY WORK</p>
-                <h2>Projects</h2>
-                <p style="max-width: 700px; margin: 0 auto; color: #cbd5e1;">
-                    Here are some of my academic and personal projects showcasing my skills in various technologies
+                <div class="subtitle"><i class="fas fa-code-branch"></i> Open Source &amp; Research Portfolio</div>
+                <h2>Featured Engineering Projects</h2>
+                <p>
+                    A collection of database storage engines, cloud-native microservices architectures,
+                    low-level socket systems, and machine learning models designed with production rigor.
                 </p>
             </div>
 
+            <!-- Controls: Search & Category Filter Pills -->
+            <div class="projects-controls">
+                <div class="search-box-wrap">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="projectSearch" class="search-input" placeholder="Search by tech, keyword, or architecture (e.g. Java, Docker, Sockets)..." autocomplete="off">
+                </div>
+
+                <div class="filter-pills">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="systems">Systems &amp; DB</button>
+                    <button class="filter-btn" data-filter="devops">Cloud &amp; DevSecOps</button>
+                    <button class="filter-btn" data-filter="ai-ml">AI &amp; Machine Learning</button>
+                    <button class="filter-btn" data-filter="software">Application Dev</button>
+                </div>
+            </div>
+
+            <!-- Dynamic Project Grid Container -->
             <div class="projects-grid">
-                <!-- Projects will be dynamically loaded via JavaScript -->
+                <!-- Dynamically rendered via assets/js/projects-data.js -->
             </div>
         </div>
     </section>
@@ -176,47 +83,61 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Jils's Portfolio</h3>
-                    <p style="color: var(--text-muted);">
-                        MTech CSE Student at IIIT Bangalore | AI/ML Specialist
+                <div class="footer-brand">
+                    <a href="./index.html" class="logo-wrap">
+                        <span class="logo-badge">&lt;JP/&gt;</span>
+                        <span class="logo-text">Jils<span>.dev</span></span>
+                    </a>
+                    <p>
+                        MTech CSE Student at IIIT Bangalore. Crafting high-performance database engines,
+                        scalable microservices, and AI solutions.
                     </p>
                 </div>
 
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <ul>
+                <div>
+                    <h4 class="footer-heading">Navigation</h4>
+                    <ul class="footer-nav-list">
                         <li><a href="./index.html">Home</a></li>
-                        <li><a href="./about.html">About</a></li>
+                        <li><a href="./about.html">About Me</a></li>
                         <li><a href="./projects.html">Projects</a></li>
                         <li><a href="./contact.html">Contact</a></li>
+                        <li><a href="./Jils_Resume.pdf" target="_blank">Resume (PDF)</a></li>
                     </ul>
                 </div>
 
-                <div class="footer-section">
-                    <h3>Connect</h3>
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/jilspatel29765048/" target="_blank" aria-label="LinkedIn">
+                <div>
+                    <h4 class="footer-heading">Connect</h4>
+                    <div class="footer-socials-row">
+                        <a href="https://www.linkedin.com/in/jilspatel29765048/" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="LinkedIn">
                             <i class="fab fa-linkedin"></i>
                         </a>
-                        <a href="https://github.com/JILSPATEL" target="_blank" aria-label="GitHub">
+                        <a href="https://github.com/JILSPATEL" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="GitHub">
                             <i class="fab fa-github"></i>
                         </a>
-                        <a href="https://wa.me/" target="_blank" aria-label="WhatsApp">
-                            <i class="fab fa-whatsapp"></i>
+                        <a href="mailto:201430142023.cse.jils@gmail.com" class="footer-social-btn" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
                         </a>
-                        <a href="https://t.me/Jils18" target="_blank" aria-label="Telegram">
+                        <a href="https://t.me/Jils18" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Telegram">
                             <i class="fab fa-telegram"></i>
+                        </a>
+                        <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
                         </a>
                     </div>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p>Copyright © 2024 Jils's Portfolio | All Rights Reserved</p>
+                <p>&copy; 2026 Jils Patel. All rights reserved.</p>
+                <p>Engineered with Modern Glassmorphism &amp; High-Performance Web Standards.</p>
             </div>
         </div>
     </footer>
+
+    <!-- Back to top button -->
+    <button class="back-to-top" aria-label="Back to Top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
 
     <script src="assets/js/projects-data.js"></script>
     <script src="assets/js/main.js"></script>

@@ -1,41 +1,62 @@
-# Jils Patel Portfolio Website
+# Jils Patel — Modern Personal Portfolio
 
-A clean personal portfolio website built with HTML, CSS, and JavaScript. The site highlights academic projects, skills, education, and contact details in a modern responsive layout.
+A modern, high-performance portfolio website built with HTML5, CSS3 Glassmorphism, and modern ES6+ JavaScript. Designed with deep-space aesthetics, cybernetic neon accents, responsive typography, and interactive components.
 
-## Project Structure
+## 🚀 Live Highlights & Features
 
-- `index.html` - Home page with hero section, project highlights, and education timeline
-- `about.html` - About page with profile details, biography, and skills section
-- `projects.html` - Projects page with dynamically rendered project cards
-- `contact.html` - Contact page with contact cards and a custom contact form
-- `assets/css/style.css` - Main site styling
-- `assets/css/contact-form.css` - Contact form layout and styles
-- `assets/js/main.js` - Navigation and UI interactions
-- `assets/js/projects-data.js` - Project data used to populate the projects section
-- `assets/js/contact-form.js` - Contact form handling logic
-- `assets/images/` - Website illustrations and icons
-- `Jils_Resume.pdf` - Resume file linked from the homepage
+- **Futuristic Dark-Mode Glassmorphism**: Tailored theme with custom radial aurora glows, micro-grid textures, frosted-glass backdrops (`backdrop-filter: blur`), and interactive glowing borders.
+- **Dynamic 3D Hero Workstation Visual**: High-resolution 3D tech illustration highlighting software architecture, neural networks, and cloud microservices, complete with interactive floating tech badges.
+- **Curated Projects Showcase**:
+  - Dynamically rendered project cards with dedicated SVG architecture blueprints and custom metric pills.
+  - Interactive category filtering (`Systems & DB`, `Cloud & DevSecOps`, `AI & Machine Learning`, `Application Dev`).
+  - Real-time search by technology, keyword, or architecture.
+- **Academic & Milestones Timeline**: Glowing cybernetic milestone timeline spanning education at IIIT Bangalore (MTech CSE), New LJIET (BTech CSE), and academic achievements.
+- **Comprehensive Skills Matrix**: Categorized technical inventory with modern pill cards covering Systems, DevOps, AI/ML, and Core Languages.
+- **Custom Contact System**: Glassmorphic contact form integrated directly with Google Forms via client-side fetch, featuring real-time input validation, loading states, and success toasts.
+- **Smooth Navigation & Micro-Interactions**:
+  - Scroll progress bar along the top edge.
+  - Floating frosted-glass navbar with active link highlight.
+  - Smooth mobile navigation drawer.
+  - Dynamic 3D tilt effects on desktop hover.
+  - Floating back-to-top button.
 
-## Features
+## 📁 Project Structure
 
-- Fully responsive layout optimized for desktop and mobile
-- Navigation across Home, About, Projects, and Contact pages
-- Project showcase with cards loaded from JavaScript data
-- Education timeline and skills section for developer profile
-- Contact page with email, LinkedIn, GitHub links, and contact form
-- Clean visual design with gradient cards and iconography
+```
+portfolio-website/
+├── index.html                   # Modern Homepage with Hero, Timeline, and CTAs
+├── about.html                   # Detailed Bio, Research Interests & Categorized Skills
+├── projects.html                # Searchable, filterable Projects showcase
+├── contact.html                 # Direct channels and custom contact form
+├── Jils_Resume.pdf              # Academic & engineering resume
+├── README.md                    # Project documentation
+└── assets/
+    ├── css/
+    │   ├── style.css            # Complete design system, glassmorphism, variables & layout
+    │   └── contact-form.css     # Form layouts, input focus rings, and alert banners
+    ├── js/
+    │   ├── main.js              # Scroll progress, mobile menu, animations & tilt effects
+    │   ├── projects-data.js     # Centralized project data, grid rendering, search & filters
+    │   └── contact-form.js      # Form validation and Google Forms integration
+    └── images/
+        ├── hero-modern.png      # 3D futuristic isometric hero workstation illustration
+        ├── profile-opt.png      # Web-optimized profile avatar
+        ├── projects/            # Bespoke SVG architecture blueprints for projects
+        │   ├── columnar-db.svg
+        │   ├── microservices-devsecops.svg
+        │   ├── banking-system.svg
+        │   ├── restaurant-billing.svg
+        │   └── smart-farming.svg
+        └── ...
+```
 
-## Usage
+## 🛠️ Tech Stack
 
-1. Open `index.html` in a browser.
-2. Navigate using the header links.
-3. Use the resume link to view the PDF.
-4. Visit the `Projects` page to see dynamically loaded project content.
-5. Submit a message via the contact form on `contact.html`.
+- **Markup & Layout**: Semantic HTML5, CSS Grid, Flexbox
+- **Design & Styling**: CSS Variables, Glassmorphism, CSS Custom Scrollbar, Font Awesome 6.5
+- **Typography**: Plus Jakarta Sans, Inter, JetBrains Mono
+- **Interactions**: Vanilla JavaScript (ES6+), IntersectionObserver API, CSS Transforms & Keyframes
 
-## Notes
+## 📄 License & Attribution
 
-- No backend is required for the static portfolio pages.
-- The contact form currently uses client-side JavaScript for form interactions.
-- Update `assets/js/projects-data.js` to add or edit project entries.
-- Customize colors and layout in `assets/css/style.css` and `assets/css/contact-form.css`.
+Copyright © 2026 Jils Patel. All rights reserved.

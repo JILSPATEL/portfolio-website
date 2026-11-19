@@ -1,78 +1,146 @@
-// ====================================
-// MODERN PORTFOLIO JAVASCRIPT
-// ====================================
+// ==========================================================================
+// JILS PATEL - MODERN PORTFOLIO INTERACTIONS (2026)
+// ==========================================================================
 
-// Mobile Menu Toggle
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
+    // 1. Mobile Navigation Drawer Toggle
     const mobileToggle = document.querySelector('.mobile-menu-toggle');
-    const navMenu = document.querySelector('nav ul');
+    const mainNav = document.querySelector('nav');
     
-    if (mobileToggle) {
-        mobileToggle.addEventListener('click', function() {
-            navMenu.classList.toggle('active');
+    if (mobileToggle && mainNav) {
+        mobileToggle.addEventListener('click', function () {
+            mainNav.classList.toggle('mobile-active');
+            const icon = mobileToggle.querySelector('i');
+            if (icon) {
+                if (mainNav.classList.contains('mobile-active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            }
         });
     }
-    
-    // Close mobile menu when clicking on a link
-    const navLinks = document.querySelectorAll('nav ul li a');
+
+    // Close mobile drawer when clicking a navigation link
+    const navLinks = document.querySelectorAll('nav ul li a, .nav-cta');
     navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            if (window.innerWidth <= 768) {
-                navMenu.classList.remove('active');
+        link.addEventListener('click', function () {
+            if (mainNav && mainNav.classList.contains('mobile-active')) {
+                mainNav.classList.remove('mobile-active');
+                const icon = mobileToggle ? mobileToggle.querySelector('i') : null;
+                if (icon) {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
             }
         });
     });
-    
-    // Smooth scroll for anchor links
+
+    // 2. Highlight current active nav item
+    const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+    document.querySelectorAll('nav ul li a').forEach(link => {
+        const href = link.getAttribute('href').split('/').pop();
+        if (href === currentPath || (currentPath === '' && href === 'index.html')) {
+            link.classList.add('active');
+            link.setAttribute('data-current', 'true');
+        } else {
+            link.classList.remove('active');
+            link.removeAttribute('data-current');
+        }
+    });
+
+    // 3. Scroll Progress Indicator & Navbar Elevation
+    const scrollBar = document.querySelector('.scroll-progress');
+    const backToTopBtn = document.querySelector('.back-to-top');
+
+    window.addEventListener('scroll', function () {
+        const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (winScroll / height) * 100;
+
+        if (scrollBar) {
+            scrollBar.style.width = scrolled + '%';
+        }
+
+        if (mainNav) {
+            if (winScroll > 40) {
+                mainNav.classList.add('scrolled');
+            } else {
+                mainNav.classList.remove('scrolled');
+            }
+        }
+
+        if (backToTopBtn) {
+            if (winScroll > 400) {
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        }
+    });
+
+    // 4. Back To Top Action
+    if (backToTopBtn) {
+        backToTopBtn.addEventListener('click', function () {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+
+    // 5. Smooth scroll for internal links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
+            const targetId = this.getAttribute('href');
+            if (targetId && targetId !== '#') {
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    e.preventDefault();
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
             }
         });
     });
-    
-    // Intersection Observer for scroll animations
+
+    // 6. Intersection Observer for Scroll Animations
     const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
+        threshold: 0.12,
+        rootMargin: '0px 0px -40px 0px'
     };
-    
-    const observer = new IntersectionObserver(function(entries) {
+
+    const revealObserver = new IntersectionObserver(function (entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('fade-in');
-                observer.unobserve(entry.target);
+                revealObserver.unobserve(entry.target);
             }
         });
     }, observerOptions);
-    
-    // Observe all cards and timeline items
-    document.querySelectorAll('.card, .timeline-item, .timeline-content').forEach(element => {
-        observer.observe(element);
-    });
-    
-    // Add active state to current nav item
-    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-    navLinks.forEach(link => {
-        const linkPage = link.getAttribute('href').split('/').pop();
-        if (linkPage === currentPage || (currentPage === '' && linkPage === 'index.html')) {
-            link.style.color = 'var(--accent-purple)';
-        }
-    });
-});
 
-// Parallax effect for hero section (optional enhancement)
-window.addEventListener('scroll', function() {
-    const scrolled = window.pageYOffset;
-    const heroImage = document.querySelector('.hero-image img');
-    
-    if (heroImage && scrolled < window.innerHeight) {
-        heroImage.style.transform = `translateY(${scrolled * 0.3}px)`;
+    document.querySelectorAll('.timeline-item, .project-card, .skill-pill-card, .contact-quick-card, .education-card, .narrative-card').forEach(el => {
+        revealObserver.observe(el);
+    });
+
+    // 7. Dynamic 3D tilt effect on hero card (desktop only)
+    const heroVisualCard = document.querySelector('.hero-visual-card');
+    if (heroVisualCard && window.innerWidth > 992) {
+        heroVisualCard.addEventListener('mousemove', function (e) {
+            const rect = heroVisualCard.getBoundingClientRect();
+            const x = e.clientX - rect.left - rect.width / 2;
+            const y = e.clientY - rect.top - rect.height / 2;
+            const rotateX = (-y / rect.height) * 12;
+            const rotateY = (x / rect.width) * 12;
+            heroVisualCard.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+        });
+
+        heroVisualCard.addEventListener('mouseleave', function () {
+            heroVisualCard.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)';
+        });
     }
 });

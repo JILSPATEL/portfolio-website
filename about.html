@@ -4,254 +4,271 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="About Jils Patel - MTech CSE Student at IIIT Bangalore">
-    <title>About - Jils Patel</title>
+    <meta name="description" content="About Jils Patel - MTech CSE Scholar at IIIT Bangalore, Specializing in Systems, AI/ML, and DevSecOps">
+    <title>About Me — Jils Patel</title>
 
     <link rel="icon" type="image/png" href="assets/images/project.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
-
-    <style>
-        .about-section {
-            padding: 4rem 0;
-        }
-
-        .profile-card {
-            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-            border: 1px solid rgba(59, 130, 246, 0.3);
-            border-radius: 1rem;
-            overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-            max-width: 400px;
-            margin: 0 auto 4rem;
-        }
-
-        .profile-card img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .profile-info {
-            padding: 2rem;
-            text-align: center;
-            background: linear-gradient(180deg, transparent, rgba(59, 130, 246, 0.1));
-        }
-
-        .profile-info h2 {
-            font-size: 1.5rem;
-            color: #3b82f6;
-            margin-bottom: 0.5rem;
-        }
-
-        .profile-info p {
-            color: #cbd5e1;
-            margin: 0.25rem 0;
-        }
-
-        .about-content {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .about-content h2 {
-            font-size: 2rem;
-            color: #3b82f6;
-            margin-bottom: 1.5rem;
-        }
-
-        .about-content p {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: #cbd5e1;
-            margin-bottom: 1.5rem;
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .skill-card {
-            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-            border: 1px solid rgba(59, 130, 246, 0.2);
-            border-radius: 1rem;
-            padding: 2rem;
-            text-align: center;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .skill-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 3px;
-            background: linear-gradient(90deg, #3b82f6, #60a5fa);
-            transition: 0.5s;
-        }
-
-        .skill-card:hover::before {
-            left: 0;
-        }
-
-        .skill-card:hover {
-            transform: translateY(-10px);
-            border-color: #3b82f6;
-            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.3);
-        }
-
-        .skill-icon {
-            font-size: 3.5rem;
-            color: #3b82f6;
-            margin-bottom: 1rem;
-        }
-
-        .skill-card h3 {
-            font-size: 1.5rem;
-            color: #f1f5f9;
-            margin-bottom: 1rem;
-        }
-
-        .skill-card p {
-            color: #94a3b8;
-            font-size: 0.95rem;
-        }
-
-        @media (max-width: 768px) {
-            .skills-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
 </head>
 
 <body>
-    <!-- Navigation -->
+    <!-- Top Scroll Progress Indicator -->
+    <div class="scroll-progress"></div>
+
+    <!-- Navigation Bar -->
     <nav>
         <div class="container">
-            <div class="logo">Jils's Portfolio</div>
-            <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+            <a href="./index.html" class="logo-wrap">
+                <span class="logo-badge">&lt;JP/&gt;</span>
+                <span class="logo-text">Jils<span>.dev</span></span>
+            </a>
+
+            <div class="nav-menu-wrapper">
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./about.html" class="active">About</a></li>
+                    <li><a href="./projects.html">Projects</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+                <a href="./Jils_Resume.pdf" target="_blank" rel="noopener noreferrer" class="nav-cta">
+                    <i class="fas fa-file-pdf"></i> Resume
+                </a>
+            </div>
+
+            <button class="mobile-menu-toggle" aria-label="Toggle Navigation">
                 <i class="fas fa-bars"></i>
             </button>
-            <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./about.html">About</a></li>
-                <li><a href="./projects.html">Projects</a></li>
-                <li><a href="./contact.html">Contact</a></li>
-            </ul>
         </div>
     </nav>
 
-    <!-- About Section -->
-    <section class="about-section">
+    <!-- Main About Section -->
+    <section>
         <div class="container">
-            <!-- Profile Card - Centered -->
-            <div class="profile-card">
-                <img src="assets/images/profile.png" alt="Jils Patel">
-                <div class="profile-info">
-                    <h2>Jils Patel</h2>
-                    <p>🎓 MTech CSE Student</p>
-                    <p>IIIT Bangalore</p>
+            <div class="section-header">
+                <div class="subtitle"><i class="fas fa-user-astronaut"></i> Biography &amp; Technical Profile</div>
+                <h2>Architecting Resilient Software Systems</h2>
+                <p>MTech Computer Science scholar at IIIT Bangalore with a deep focus on database engines, systems architecture, and machine learning.</p>
+            </div>
+
+            <div class="about-hero-grid">
+                <!-- Left: Profile Snapshot Card -->
+                <aside class="about-profile-card">
+                    <div class="profile-avatar-wrap">
+                        <img src="assets/images/profile-opt.png" alt="Jils Patel" onerror="this.src='assets/images/profile.png'">
+                    </div>
+                    <div class="profile-meta-info">
+                        <h2>Jils Patel</h2>
+                        <div class="profile-role-pill">🎓 MTech CSE Scholar</div>
+                        <p class="profile-institution">
+                            <i class="fas fa-map-marker-alt" style="color: var(--primary-cyan); margin-right: 0.35rem;"></i>
+                            IIIT Bangalore &bull; Karnataka, India
+                        </p>
+
+                        <div class="profile-socials">
+                            <a href="https://www.linkedin.com/in/jilspatel29765048/" target="_blank" rel="noopener noreferrer" class="profile-social-link" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://github.com/JILSPATEL" target="_blank" rel="noopener noreferrer" class="profile-social-link" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="mailto:201430142023.cse.jils@gmail.com" class="profile-social-link" aria-label="Email">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                            <a href="https://t.me/Jils18" target="_blank" rel="noopener noreferrer" class="profile-social-link" aria-label="Telegram">
+                                <i class="fab fa-telegram"></i>
+                            </a>
+                        </div>
+
+                        <div style="margin-top: 1.5rem;">
+                            <a href="./Jils_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width: 100%;">
+                                <i class="fas fa-file-pdf"></i> Download Resume
+                            </a>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Right: Detailed Narrative -->
+                <div class="about-narrative">
+                    <div class="narrative-card">
+                        <h3><i class="fas fa-terminal" style="color: var(--primary-cyan);"></i> Hello, World!</h3>
+                        <p>
+                            I am currently pursuing my <strong>Master of Technology (MTech) in Computer Science and Engineering at the International Institute of Information Technology, Bangalore (IIIT Bangalore)</strong>.
+                            My academic and engineering journey centers around building rock-solid backend infrastructure, data storage engines, and applied artificial intelligence systems.
+                        </p>
+                        <p>
+                            Prior to IIIT Bangalore, I earned my <strong>BTech in Computer Science and Engineering with specialization in AI &amp; Machine Learning</strong> from New LJIET.
+                            Over the years, I've honed my craft in low-level systems programming in C and Linux sockets, building database internals in Java from first principles (including SQL parsing and columnar storage with bitmap indexing), and deploying hardened microservices architectures on Kubernetes.
+                        </p>
+                        <p>
+                            I believe great software is born at the intersection of rigorous algorithmic thinking, clean modular design, and robust automated testing and verification.
+                        </p>
+                    </div>
+
+                    <!-- Domain Expertise Highlights -->
+                    <div class="narrative-card">
+                        <h3><i class="fas fa-cubes" style="color: var(--primary-cyan);"></i> What I Specialize In</h3>
+                        <div class="expertise-grid">
+                            <div class="expertise-card">
+                                <div class="expertise-icon"><i class="fas fa-database"></i></div>
+                                <h4>Database Engines &amp; Internals</h4>
+                                <p>Custom columnar layouts, dictionary encoding, AST SQL query parsing, and O(1) random record access using Java BitSets.</p>
+                            </div>
+
+                            <div class="expertise-card">
+                                <div class="expertise-icon"><i class="fas fa-shield-alt"></i></div>
+                                <h4>Cloud &amp; DevSecOps</h4>
+                                <p>Kubernetes orchestration, automated CI/CD pipelines with Jenkins and Ansible, Prometheus observability, and Trivy/Cosign container security gates.</p>
+                            </div>
+
+                            <div class="expertise-card">
+                                <div class="expertise-icon"><i class="fas fa-network-wired"></i></div>
+                                <h4>Systems &amp; Network Concurrency</h4>
+                                <p>POSIX sockets, multi-client TCP streaming, Linux kernel file-locking primitives, and race condition prevention in C.</p>
+                            </div>
+
+                            <div class="expertise-card">
+                                <div class="expertise-icon"><i class="fas fa-brain"></i></div>
+                                <h4>AI &amp; Machine Learning</h4>
+                                <p>Supervised and unsupervised ML models, ensemble decision trees with ~96% classification accuracy, and real-time inference APIs.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <!-- About Description -->
-            <div class="about-content">
-                <h2>👋 About Me</h2>
-                <p>
-                    I'm currently pursuing MTech in Computer Science and Engineering at IIIT Bangalore,
-                    specializing in Artificial Intelligence and Machine Learning. With a strong foundation
-                    in programming and problem-solving, I'm passionate about creating innovative solutions
-                    that make a real impact.
-                </p>
-                <p>
-                    My expertise spans across Python, Java, and modern web technologies. I enjoy building
-                    scalable applications and exploring cutting-edge technologies in AI/ML, always eager
-                    to learn and take on new challenges.
-                </p>
-                <p>
-                    When I'm not coding, I'm probably exploring new frameworks, contributing to open-source
-                    projects, or learning about the latest advancements in technology.
-                </p>
-            </div>
-
-            <!-- Skills Section -->
-            <div class="section-header" style="margin-top: 4rem;">
-                <p class="subtitle">🛠️ MY EXPERTISE</p>
-                <h2>Skills & Technologies</h2>
-            </div>
-
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fab fa-python"></i>
-                    </div>
-                    <h3>Python</h3>
-                    <p>Expert in Python for AI/ML, data structures, algorithms, and automation</p>
+            <!-- Comprehensive Skills Matrix -->
+            <div class="skills-category-wrapper">
+                <div class="section-header" style="margin-bottom: 2.5rem;">
+                    <div class="subtitle"><i class="fas fa-tools"></i> Technical Inventory</div>
+                    <h2>Skills &amp; Technologies</h2>
+                    <p>A categorized breakdown of programming languages, tools, frameworks, and system utilities in my repertoire.</p>
                 </div>
 
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fab fa-java"></i>
+                <!-- Category 1: Languages -->
+                <h3 class="skills-category-title"><i class="fas fa-code"></i> Programming Languages</h3>
+                <div class="skills-modern-grid">
+                    <div class="skill-pill-card">
+                        <i class="fab fa-java skill-pill-icon"></i>
+                        <div class="skill-pill-info">
+                            <h4>Java</h4>
+                            <p>OOP, Multi-threading, JVM tuning, custom query execution engines, BitSet indexing.</p>
+                        </div>
                     </div>
-                    <h3>Java</h3>
-                    <p>Strong OOP skills, building robust and scalable enterprise applications</p>
+
+                    <div class="skill-pill-card">
+                        <i class="fab fa-python skill-pill-icon"></i>
+                        <div class="skill-pill-info">
+                            <h4>Python</h4>
+                            <p>Data science, ML algorithms, Flask API backends, automation scripts, Tkinter GUIs.</p>
+                        </div>
+                    </div>
+
+                    <div class="skill-pill-card">
+                        <i class="fa fa-cuttlefish skill-pill-icon"></i>
+                        <div class="skill-pill-info">
+                            <h4>C / C++</h4>
+                            <p>Systems programming, POSIX sockets, pointers, memory buffers, DSA optimization.</p>
+                        </div>
+                    </div>
+
+                    <div class="skill-pill-card">
+                        <i class="fas fa-database skill-pill-icon"></i>
+                        <div class="skill-pill-info">
+                            <h4>SQL (MySQL)</h4>
+                            <p>Schema normalization, relational query optimization, indexing, ACID transactions.</p>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fa fa-cuttlefish"></i>
+                <!-- Category 2: Cloud, DevOps & Platforms -->
+                <h3 class="skills-category-title"><i class="fas fa-cloud"></i> Cloud, DevOps &amp; Infrastructure</h3>
+                <div class="skills-modern-grid">
+                    <div class="skill-pill-card">
+                        <i class="fab fa-docker skill-pill-icon"></i>
+                        <div class="skill-pill-info">
+                            <h4>Docker</h4>
+                            <p>Multi-stage builds, container isolation, lightweight alpine base images.</p>
+                        </div>
                     </div>
-                    <h3>C++</h3>
-                    <p>Strong algorithmic and data-structure skills, writing efficient and optimized solutions for
-                        competitive programming</p>
+
+                    <div class="skill-pill-card">
+                        <i class="fas fa-dharmachakra skill-pill-icon"></i>
+                        <div class="skill-pill-info">
+                            <h4>Kubernetes</h4>
+                            <p>Pod orchestration, Deployments, Services, ConfigMaps, Ingress, HPA scaling.</p>
+                        </div>
+                    </div>
+
+                    <div class="skill-pill-card">
+                        <i class="fab fa-linux skill-pill-icon"></i>
+                        <div class="skill-pill-info">
+                            <h4>Linux &amp; Shell</h4>
+                            <p>Bash scripting, system administration, socket diagnostics, process management.</p>
+                        </div>
+                    </div>
+
+                    <div class="skill-pill-card">
+                        <i class="fas fa-cogs skill-pill-icon"></i>
+                        <div class="skill-pill-info">
+                            <h4>Jenkins &amp; Ansible</h4>
+                            <p>Automated declarative CI/CD pipelines, configuration management, automated deploys.</p>
+                        </div>
+                    </div>
+
+                    <div class="skill-pill-card">
+                        <i class="fas fa-shield-alt skill-pill-icon"></i>
+                        <div class="skill-pill-info">
+                            <h4>DevSecOps Tooling</h4>
+                            <p>Trivy vulnerability scans, Syft SBOM generation, Cosign container signing.</p>
+                        </div>
+                    </div>
+
+                    <div class="skill-pill-card">
+                        <i class="fas fa-chart-line skill-pill-icon"></i>
+                        <div class="skill-pill-info">
+                            <h4>Prometheus &amp; Grafana</h4>
+                            <p>Time-series metrics collection, dashboard visualization, cluster health alerts.</p>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-code"></i>
+                <!-- Category 3: AI & Data Science -->
+                <h3 class="skills-category-title"><i class="fas fa-brain"></i> AI, Machine Learning &amp; Analytics</h3>
+                <div class="skills-modern-grid">
+                    <div class="skill-pill-card">
+                        <i class="fas fa-project-diagram skill-pill-icon"></i>
+                        <div class="skill-pill-info">
+                            <h4>Scikit-Learn</h4>
+                            <p>Supervised learning, classification, regression, random forests, model evaluation.</p>
+                        </div>
                     </div>
-                    <h3>Web Development</h3>
-                    <p>HTML, CSS, JavaScript for creating dynamic and responsive web applications</p>
-                </div>
 
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-brain"></i>
+                    <div class="skill-pill-card">
+                        <i class="fas fa-table skill-pill-icon"></i>
+                        <div class="skill-pill-info">
+                            <h4>Pandas &amp; NumPy</h4>
+                            <p>High-performance vector operations, tabular data wrangling, feature engineering.</p>
+                        </div>
                     </div>
-                    <h3>AI & Machine Learning</h3>
-                    <p>Specialized in ML algorithms, deep learning, and data science</p>
-                </div>
 
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-database"></i>
+                    <div class="skill-pill-card">
+                        <i class="fas fa-chart-bar skill-pill-icon"></i>
+                        <div class="skill-pill-info">
+                            <h4>Power BI</h4>
+                            <p>Interactive executive dashboards, business intelligence insights, data modeling.</p>
+                        </div>
                     </div>
-                    <h3>MySQL</h3>
-                    <p>Proficient in relational database design, normalization, and writing efficient SQL queries</p>
-                </div>
 
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-chart-bar"></i>
+                    <div class="skill-pill-card">
+                        <i class="fas fa-laptop-code skill-pill-icon"></i>
+                        <div class="skill-pill-info">
+                            <h4>Web Fundamentals</h4>
+                            <p>Semantic HTML5, Modern CSS Glassmorphism, Vanilla ES6+ JavaScript, Responsive UI.</p>
+                        </div>
                     </div>
-                    <h3>Power BI</h3>
-                    <p>Experienced in creating interactive dashboards, data visualization, and business intelligence
-                        reporting</p>
-                </div>
-
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fab fa-linux"></i>
-                    </div>
-                    <h3>Linux</h3>
-                    <p>Proficient in shell scripting, system administration, and development in Linux environments</p>
                 </div>
             </div>
         </div>
@@ -261,48 +278,61 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Jils's Portfolio</h3>
-                    <p style="color: var(--text-muted);">
-                        MTech CSE Student at IIIT Bangalore | AI/ML Specialist
+                <div class="footer-brand">
+                    <a href="./index.html" class="logo-wrap">
+                        <span class="logo-badge">&lt;JP/&gt;</span>
+                        <span class="logo-text">Jils<span>.dev</span></span>
+                    </a>
+                    <p>
+                        MTech CSE Student at IIIT Bangalore. Crafting high-performance database engines,
+                        scalable microservices, and AI solutions.
                     </p>
                 </div>
 
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <ul>
+                <div>
+                    <h4 class="footer-heading">Navigation</h4>
+                    <ul class="footer-nav-list">
                         <li><a href="./index.html">Home</a></li>
-                        <li><a href="./about.html">About</a></li>
+                        <li><a href="./about.html">About Me</a></li>
                         <li><a href="./projects.html">Projects</a></li>
                         <li><a href="./contact.html">Contact</a></li>
+                        <li><a href="./Jils_Resume.pdf" target="_blank">Resume (PDF)</a></li>
                     </ul>
                 </div>
 
-                <div class="footer-section">
-                    <h3>Connect</h3>
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/jilspatel29765048/" target="_blank"
-                            aria-label="LinkedIn">
+                <div>
+                    <h4 class="footer-heading">Connect</h4>
+                    <div class="footer-socials-row">
+                        <a href="https://www.linkedin.com/in/jilspatel29765048/" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="LinkedIn">
                             <i class="fab fa-linkedin"></i>
                         </a>
-                        <a href="https://github.com/JILSPATEL" target="_blank" aria-label="GitHub">
+                        <a href="https://github.com/JILSPATEL" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="GitHub">
                             <i class="fab fa-github"></i>
                         </a>
-                        <a href="https://wa.me/" target="_blank" aria-label="WhatsApp">
-                            <i class="fab fa-whatsapp"></i>
+                        <a href="mailto:201430142023.cse.jils@gmail.com" class="footer-social-btn" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
                         </a>
-                        <a href="https://t.me/Jils18" target="_blank" aria-label="Telegram">
+                        <a href="https://t.me/Jils18" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Telegram">
                             <i class="fab fa-telegram"></i>
+                        </a>
+                        <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
                         </a>
                     </div>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p>Copyright © 2024 Jils's Portfolio | All Rights Reserved</p>
+                <p>&copy; 2026 Jils Patel. All rights reserved.</p>
+                <p>Engineered with Modern Glassmorphism &amp; High-Performance Web Standards.</p>
             </div>
         </div>
     </footer>
+
+    <!-- Back to top button -->
+    <button class="back-to-top" aria-label="Back to Top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
 
     <script src="assets/js/main.js"></script>
 </body>
